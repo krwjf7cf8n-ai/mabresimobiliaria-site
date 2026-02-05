@@ -1,4 +1,13 @@
-import SearchForm from "@/components/SearchForm";
+type Imovel = {
+  id?: string | number
+  titulo?: string
+  preco?: number | string
+  bairro?: string
+  cidade?: string
+  foto?: string
+  [key: string]: any
+}
+  import SearchForm from "@/components/SearchForm";
 import PropertyCard from "@/components/PropertyCard";
 import { fetchImoveis } from "@/lib/strapi";
 
@@ -24,7 +33,9 @@ export default async function ImoveisPage({ searchParams }: { searchParams: Reco
 
   const mk = (p: number) => {
     const qs = new URLSearchParams();
-    Object.entries(searchParams).forEach(([k, v]) => { if (v) qs.set(k, v); });
+    Object.entries(searchParams).forEach(([k, v]) => {
+  if (typeof v === "string") qs.set(k, v);
+});
     qs.set("page", String(p));
     return `/imoveis?${qs.toString()}`;
   };
@@ -35,12 +46,23 @@ export default async function ImoveisPage({ searchParams }: { searchParams: Reco
       <SearchForm compact />
 
       <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
-        {data.length ? data.map((imovel) => <PropertyCard key={imovel.id} imovel={imovel} />) : (
-          <div className="card" style={{ padding: 18 }}>
-            <div style={{ fontWeight: 800 }}>Nenhum imóvel encontrado</div>
-            <p className="p">Tente ajustar os filtros (tipo, bairro ou preço).</p>
-          </div>
-        )}
+    {Array.isArray(data) && data.length > 0 ? (
+  data.map((imovel: Imovel) => (
+    <PropertyCard
+      key={String(imovel.id)}
+      imovel={imovel}
+    />
+  ))
+) : (
+  <div>
+    <div style={{ fontWeight: 800 }}>
+      Nenhum imóvel encontrado
+    </div>
+    <p className="p">
+      Tente ajustar os filtros (tipo, bairro ou preço).
+    </p>
+  </div>
+)}
       </div>
 
       <div style={{ display: "flex", gap: 10, justifyContent: "center", alignItems: "center", marginTop: 10, flexWrap: "wrap" }}>
