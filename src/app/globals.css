@@ -1,0 +1,31 @@
+:root {
+  --bg: #0F1115;
+  --card: #151922;
+  --text: #FFFFFF;
+  --muted: #A7B0C0;
+  --gold: #C9A24A;
+  --border: #252B38;
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border);
+  background: transparent; color: var(--text); cursor: pointer; gap: 8px;
+}
+.btnGold { background: linear-gradient(135deg, rgba(201,162,74,.25), rgba(201,162,74,.05)); border-color: rgba(201,162,74,.5); }
+.badge { font-size: 12px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
+.grid { display: grid; gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.input {
+  width: 100%; padding: 12px 12px; border-radius: 12px;
+  border: 1px solid var(--border); background: #0F131B; color: var(--text);
+}
+.label { font-size: 13px; color: var(--muted); margin-bottom: 6px; display: block; }
+.h1 { font-size: 34px; line-height: 1.1; margin: 0; }
+.h2 { font-size: 22px; margin: 0; }
+.p { color: var(--muted); line-height: 1.6; }
+.hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }

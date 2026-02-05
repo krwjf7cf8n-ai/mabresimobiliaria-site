@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "titulo": "Casa de Bairro com 3 dormitórios",
+    "slug": "casa-de-bairro-3-dormitorios-ref-101",
+    "ref": "101",
+    "status": "disponivel",
+    "negocio": "venda",
+    "tipo": "Casa de Bairro",
+    "preco": 480000,
+    "condominio": null,
+    "iptu": 900,
+    "area_util": 120,
+    "area_total": 150,
+    "quartos": 3,
+    "suites": 1,
+    "banheiros": 2,
+    "vagas": 2,
+    "descricao": "Casa bem localizada, ótima iluminação e quintal. (Demo)",
+    "caracteristicas_imovel": [
+      "Quintal",
+      "Área gourmet",
+      "Cozinha planejada"
+    ],
+    "caracteristicas_condominio": [],
+    "proximidades": [
+      "Supermercado",
+      "Escola",
+      "Farmácia"
+    ],
+    "cidade": "Sorocaba",
+    "bairro": "Jardim São Carlos",
+    "lat": -23.501,
+    "lng": -47.452,
+    "fotos": [
+      {
+        "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80"
+      }
+    ],
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "titulo": "Apartamento com varanda",
+    "slug": "apartamento-varanda-ref-204",
+    "ref": "204",
+    "status": "disponivel",
+    "negocio": "venda",
+    "tipo": "Apartamento",
+    "preco": 320000,
+    "condominio": 420,
+    "iptu": 600,
+    "area_util": 68,
+    "quartos": 2,
+    "suites": 1,
+    "banheiros": 2,
+    "vagas": 1,
+    "descricao": "Apartamento com varanda e lazer completo. (Demo)",
+    "caracteristicas_imovel": [
+      "Varanda",
+      "Elevador"
+    ],
+    "caracteristicas_condominio": [
+      "Piscina",
+      "Academia",
+      "Portaria 24h"
+    ],
+    "proximidades": [
+      "Shopping",
+      "Parque"
+    ],
+    "cidade": "Sorocaba",
+    "bairro": "Campolim",
+    "lat": -23.529,
+    "lng": -47.465,
+    "fotos": [
+      {
+        "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80"
+      }
+    ],
+    "destaque": true
+  }
+]
