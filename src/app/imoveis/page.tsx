@@ -5,6 +5,7 @@ type Imovel = {
   bairro?: string
   cidade?: string
   foto?: string
+}
   [key: string]: any
 }
   import SearchForm from "@/components/SearchForm";
@@ -48,8 +49,10 @@ export default async function ImoveisPage({ searchParams }: { searchParams: Reco
       <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
     {Array.isArray(data) && data.length > 0 ? (
   data.map((imovel: Imovel) => (
-    <PropertyCard key={String(imovel.id)}
-      imovel={imovel} />
+    <PropertyCard 
+      key={String(imovel.id)}
+      imovel={imovel} 
+      />
   ))
 ) : (
   <div>
